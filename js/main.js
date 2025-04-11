@@ -48,8 +48,14 @@ function confirmGoal() {
 }
 
 // Navigation function
+// 更新后的导航函数（确保绝对路径）
 function navigateTo(url) {
-  window.location.href = url;
+  // 如果已经是完整URL则直接跳转
+  if (url.startsWith('http')) return window.location.href = url;
+
+  // 处理本地路径
+  const basePath = window.location.pathname.replace(/\/[^/]*$/, '');
+  window.location.href = `${basePath}/${url.replace(/^\//, '')}`;
 }
 
 // Set active sidebar item based on current page
@@ -61,5 +67,23 @@ document.addEventListener('DOMContentLoaded', function() {
     if (item.getAttribute('onclick').includes(path)) {
       item.classList.add('active');
     }
+  });
+});
+
+// 统一绑定导航事件
+document.addEventListener('DOMContentLoaded', () => {
+  // 处理侧边栏导航
+  document.querySelectorAll('.sidebar-item').forEach(item => {
+    item.addEventListener('click', function() {
+      const url = this.getAttribute('onclick').match(/navigateTo\('([^']+)'/)[1];
+      navigateTo(url);
+    });
+  });
+
+  // 处理其他点击导航（如section-more）
+  document.querySelectorAll('[data-navigate]').forEach(el => {
+    el.addEventListener('click', () => {
+      navigateTo(el.dataset.navigate);
+    });
   });
 });

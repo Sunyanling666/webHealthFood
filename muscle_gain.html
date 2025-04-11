@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muscle Gain Meals | Green Chef Fresh</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 <div class="container">
+
   <!-- Header -->
   <div class="header">
     <div class="header-title">Green Chef Fresh</div>
     <div class="header-nav">
-      <a href="index.html">Home</a>
-      <a href="community.html">Community</a>
-      <a href="about.html">About Us</a>
+      <a href="./index.html">Home</a>
+      <a href="./community.html">Community</a>
       <div class="header-cart">🛒</div>
     </div>
   </div>
@@ -23,24 +23,25 @@
   <div class="main-content">
     <!-- Sidebar -->
     <div class="sidebar">
-      <div class="sidebar-item" onclick="navigateTo('fat_loss.html')">Fat Loss</div>
-      <div class="sidebar-item active" onclick="navigateTo('muscle_gain.html')">Muscle Gain</div>
-      <div class="sidebar-item" onclick="navigateTo('sugar_control.html')">Sugar Control</div>
-      <div class="sidebar-item" onclick="navigateTo('supply_chain.html')">Supply Chain</div>
-      <div class="sidebar-item" onclick="navigateTo('recipes.html')">Healthy Recipes</div>
-    </div>
+    <div class="sidebar-item" data-navigate="fat_loss.html">Fat Loss</div>
+    <div class="sidebar-item" data-navigate="muscle_gain.html">Muscle Gain</div>
+    <div class="sidebar-item" data-navigate="sugar_control.html">Sugar Control</div>
+    <div class="sidebar-item" data-navigate="supply_chain.html">Supply Chain</div>
+    <div class="sidebar-item" data-navigate="recipes.html">Healthy Recipes</div>
+  </div>
+
 
     <!-- Content Area -->
     <div class="content-area">
       <div class="section-title">
         <span>Muscle Gain Meals</span>
-        <span class="section-more" onclick="navigateTo('all_meals.html?category=muscle_gain')">View All ></span>
+        <span class="section-more" data-navigate="all_meals.html?category=muscle_gain">View All ></span>
       </div>
 
       <div class="store-list">
-        <div class="store-item" onclick="navigateTo('meal_detail.html?id=201')">
+        <div class="store-item" data-navigate="meal_detail.html?id=201">
           <div class="store-img">
-            <img src="img/muscle-gain-1.png" alt="Muscle Gain Meal 1">
+            <img src="./img/muscle-gain-1.jpg" alt="Muscle Gain Meal 1">
           </div>
           <div class="store-info">
             <div class="store-name">
@@ -61,9 +62,9 @@
           </div>
         </div>
 
-        <div class="store-item" onclick="navigateTo('meal_detail.html?id=202')">
+        <div class="store-item" data-navigate="meal_detail.html?id=202">
           <div class="store-img">
-            <img src="img/muscle-gain-2.png" alt="Muscle Gain Meal 2">
+            <img src="./img/muscle-gain-2.png" alt="Muscle Gain Meal 2">
           </div>
           <div class="store-info">
             <div class="store-name">
@@ -84,9 +85,9 @@
           </div>
         </div>
 
-        <div class="store-item" onclick="navigateTo('meal_detail.html?id=203')">
+        <div class="store-item" data-navigate="meal_detail.html?id=203">
           <div class="store-img">
-            <img src="img/muscle-gain-3.png" alt="Muscle Gain Meal 3">
+            <img src="./img/muscle-gain-3.png" alt="Muscle Gain Meal 3">
           </div>
           <div class="store-info">
             <div class="store-name">
@@ -107,9 +108,9 @@
           </div>
         </div>
 
-        <div class="store-item" onclick="navigateTo('meal_detail.html?id=204')">
+        <div class="store-item" data-navigate="meal_detail.html?id=204">
           <div class="store-img">
-            <img src="img/muscle-gain-4.png" alt="Muscle Gain Meal 4">
+            <img src="./img/muscle-gain-4.png" alt="Muscle Gain Meal 4">
           </div>
           <div class="store-info">
             <div class="store-name">
@@ -155,6 +156,6 @@
   </div>
 </div>
 
-<script src="js/main.js"></script>
+<script src="./js/main.js"></script>
 </body>
 </html>

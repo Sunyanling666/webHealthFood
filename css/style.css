@@ -621,3 +621,17 @@ a {
     min-width: 100%;
   }
 }
+
+/* 确保可点击元素有正确指针 */
+.sidebar-item, .section-more, .store-item {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* 防止快速双击误操作 */
+button, [data-navigate] {
+  transition: transform 0.1s;
+}
+button:active, [data-navigate]:active {
+  transform: scale(0.98);
+}

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Healthy Recipes | Green Chef Fresh</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Muscle Gain Meals | Green Chef Fresh</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 <div class="container">
@@ -12,9 +12,8 @@
   <div class="header">
     <div class="header-title">Green Chef Fresh</div>
     <div class="header-nav">
-      <a href="index.html">Home</a>
-      <a href="community.html">Community</a>
-      <a href="about.html">About Us</a>
+      <a href="./index.html">Home</a>
+      <a href="./community.html">Community</a>
       <div class="header-cart">🛒</div>
     </div>
   </div>
@@ -23,17 +22,18 @@
   <div class="main-content">
     <!-- Sidebar -->
     <div class="sidebar">
-      <div class="sidebar-item" onclick="navigateTo('fat_loss.html')">Fat Loss</div>
-      <div class="sidebar-item" onclick="navigateTo('muscle_gain.html')">Muscle Gain</div>
-      <div class="sidebar-item" onclick="navigateTo('sugar_control.html')">Sugar Control</div>
-      <div class="sidebar-item active" onclick="navigateTo('recipes.html')">Healthy Recipes</div>
+      <div class="sidebar-item" data-navigate="fat_loss.html">Fat Loss</div>
+      <div class="sidebar-item" data-navigate="muscle_gain.html">Muscle Gain</div>
+      <div class="sidebar-item" data-navigate="sugar_control.html">Sugar Control</div>
+      <div class="sidebar-item" data-navigate="supply_chain.html">Supply Chain</div>
+      <div class="sidebar-item" data-navigate="recipes.html">Healthy Recipes</div>
     </div>
 
     <!-- Content Area -->
     <div class="content-area">
       <div class="section-title">
         <span>Healthy Recipes</span>
-        <span class="section-more" onclick="navigateTo('all_recipes.html')">View All ></span>
+        <span class="section-more" data-navigate="all_recipes.html">View All ></span>
       </div>
 
       <div class="recipe-categories">
@@ -55,7 +55,8 @@
           </div>
           <div class="recipe-content">
             <div class="recipe-video">
-              <iframe width="100%" height="315" src="https://www.youtube.com/embed/example1" frameborder="0" allowfullscreen></iframe>
+              <iframe width="100%" height="315" src="https://www.youtube.com/shorts/guTTfcwLAf4?feature=share"
+                      frameborder="0" allowfullscreen></iframe>
             </div>
             <div class="recipe-details">
               <h4>Ingredients:</h4>
@@ -93,7 +94,8 @@
           </div>
           <div class="recipe-content">
             <div class="recipe-video">
-              <iframe width="100%" height="315" src="https://www.youtube.com/embed/example2" frameborder="0" allowfullscreen></iframe>
+              <iframe width="100%" height="315" src="https://www.youtube.com/shorts/EA0NqijVdkg" frameborder="0"
+                      allowfullscreen></iframe>
             </div>
             <div class="recipe-details">
               <h4>Ingredients:</h4>
@@ -131,7 +133,8 @@
           </div>
           <div class="recipe-content">
             <div class="recipe-video">
-              <iframe width="100%" height="315" src="https://www.youtube.com/embed/example3" frameborder="0" allowfullscreen></iframe>
+              <iframe width="100%" height="315" src="https://www.youtube.com/shorts/Sxsv0R4wt6k?feature=share"
+                      frameborder="0" allowfullscreen></iframe>
             </div>
             <div class="recipe-details">
               <h4>Ingredients:</h4>
@@ -162,6 +165,6 @@
   </div>
 </div>
 
-<script src="js/main.js"></script>
+<script src="./js/main.js"></script>
 </body>
 </html>

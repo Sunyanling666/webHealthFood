@@ -1,0 +1,26 @@
+
+>  @0.0.1 build
+> webpack --config webpack.config.prod.js
+
+assets by path [1m[32mimg/[39m[22m 5.64 MiB
+  assets by status [1m[33m3.37 MiB[39m[22m [1m[33m[big][39m[22m
+    asset [1m[33mimg/fat-loss-meal.png[39m[22m [1m[33m2.57 MiB[39m[22m [1m[32m[emitted][39m[22m [from: img/fat-loss-meal.png] [1m[32m[copied][39m[22m [1m[33m[big][39m[22m
+    asset [1m[33mimg/banner.png[39m[22m [1m[33m817 KiB[39m[22m [1m[32m[emitted][39m[22m [from: img/banner.png] [1m[32m[copied][39m[22m [1m[33m[big][39m[22m
+  + 21 assets
+assets by path [1m[32m*.html[39m[22m 6.39 KiB
+  asset [1m[32mindex.html[39m[22m 5.36 KiB [1m[32m[emitted][39m[22m
+  asset [1m[32m404.html[39m[22m 1.03 KiB [1m[32m[emitted][39m[22m [from: 404.html] [1m[32m[copied][39m[22m
++ 8 assets
+[1m./js/app.js[39m[22m 1 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+
+[1m[33mWARNING[39m[22m in [1masset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  img/banner.png (817 KiB)
+  img/fat-loss-meal.png (2.57 MiB)[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mwebpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/[39m[22m
+
+webpack 5.99.5 compiled with [1m[33m2 warnings[39m[22m in 370 ms

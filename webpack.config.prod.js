@@ -8,6 +8,43 @@ module.exports = merge(common, {
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html',
+      chunks: ['main']
+    }),
+    new HtmlWebpackPlugin({
+      template: './community.html',
+      filename: 'community.html',
+      chunks: ['main']
+    }),
+    new HtmlWebpackPlugin({
+      template: './fat_loss.html',
+      filename: 'fat_loss.html',
+      chunks: ['main']
+    }),
+    new HtmlWebpackPlugin({
+      template: './muscle_gain.html',
+      filename: 'muscle_gain.html',
+      chunks: ['main']
+    }),
+    new HtmlWebpackPlugin({
+      template: './recipes.html',
+      filename: 'recipes.html',
+      chunks: ['main']
+    }),
+    new HtmlWebpackPlugin({
+      template: './sugar_control.html',
+      filename: 'sugar_control.html',
+      chunks: ['main'],
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        conservativeCollapse: true, // 保留换行
+        preserveLineBreaks: true    // 保留换行
+      }
+    }),
+    new HtmlWebpackPlugin({
+      template: './supply_chain.html',
+      filename: 'supply_chain.html',
+      chunks: ['main']
     }),
     new CopyPlugin({
       patterns: [
@@ -17,10 +54,11 @@ module.exports = merge(common, {
         { from: 'icon.svg', to: 'icon.svg' },
         { from: 'favicon.ico', to: 'favicon.ico' },
         { from: 'robots.txt', to: 'robots.txt' },
-        { from: 'icon.png', to: 'icon.png' },
+        //{ from: 'icon.jpg', to: 'icon.jpg' },
         { from: '404.html', to: '404.html' },
         { from: 'site.webmanifest', to: 'site.webmanifest' },
       ],
     }),
   ],
 });
+
