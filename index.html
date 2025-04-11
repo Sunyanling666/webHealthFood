@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Chef Fresh - Healthy Meal Delivery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+  <!-- Header -->
+  <div class="header">
+    <div class="header-title">Green Chef Fresh</div>
+    <div class="header-nav">
+      <a href="index.html">Home</a>
+      <a href="community.html">Community</a>
+      <a href="about.html">About Us</a>
+      <div class="header-cart">🛒</div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-item" onclick="navigateTo('fat_loss.html')">Fat Loss</div>
+      <div class="sidebar-item" onclick="navigateTo('muscle_gain.html')">Muscle Gain</div>
+      <div class="sidebar-item" onclick="navigateTo('sugar_control.html')">Sugar Control</div>
+      <div class="sidebar-item" onclick="navigateTo('weekly.html')">Weekly Plans</div>
+      <div class="sidebar-item" onclick="navigateTo('recipes.html')">Healthy Recipes</div>
+    </div>
+
+    <!-- Content Area -->
+    <div class="content-area">
+      <!-- Banner -->
+      <div class="banner">
+        <img src="images/banner.png" alt="Healthy Meal Delivery">
+      </div>
+
+      <!-- Category Navigation -->
+      <div class="category-nav">
+        <div class="category-item" onclick="navigateTo('muscle_gain.html')">
+          <div class="category-icon">💪</div>
+          <div class="category-name">Muscle Gain</div>
+        </div>
+        <div class="category-item" onclick="navigateTo('fat_loss.html')">
+          <div class="category-icon">🏃</div>
+          <div class="category-name">Fat Loss</div>
+        </div>
+        <div class="category-item" onclick="navigateTo('sugar_control.html')">
+          <div class="category-icon">🍎</div>
+          <div class="category-name">Sugar Control</div>
+        </div>
+        <div class="category-item" onclick="navigateTo('supply_chain.html')">
+          <div class="category-icon">🔍</div>
+          <div class="category-name">Supply Chain</div>
+        </div>
+      </div>
+
+      <!-- Smart Recommendation -->
+      <div class="section-title">
+        <span>Smart Recommendations For You</span>
+        <span class="section-more" id="showRecommend">Customize Now ></span>
+      </div>
+
+      <!-- Popular Meals -->
+      <div class="section-title">
+        <span>Popular Healthy Meals</span>
+        <span class="section-more" onclick="navigateTo('all_meals.html')">View All ></span>
+      </div>
+
+      <!-- Meal List -->
+      <div class="store-list">
+        <div class="store-item" onclick="navigateTo('meal_detail.html?id=1')">
+          <div class="store-img">
+            <img src="images/fat-loss-meal.png" alt="Fat Loss Meal">
+          </div>
+          <div class="store-info">
+            <div class="store-name">
+              <span>7-Day Fat Loss Plan</span>
+              <span class="store-distance">3km</span>
+            </div>
+            <div class="store-rating">
+              <span class="store-stars">★★★★★</span>
+              <span class="store-score">4.9</span>
+              <span class="store-sales">1000+ orders</span>
+            </div>
+            <div class="store-price">$25-35 | ~500 kcal</div>
+            <div class="store-tags">
+              <span class="store-tag">Low Calorie</span>
+              <span class="store-tag">Balanced</span>
+              <span class="store-tag">Central Kitchen</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="store-item" onclick="navigateTo('meal_detail.html?id=2')">
+          <div class="store-img">
+            <img src="images/muscle-gain-meal.png" alt="Muscle Gain Meal">
+          </div>
+          <div class="store-info">
+            <div class="store-name">
+              <span>High Protein Meal</span>
+              <span class="store-distance">3km</span>
+            </div>
+            <div class="store-rating">
+              <span class="store-stars">★★★★☆</span>
+              <span class="store-score">4.7</span>
+              <span class="store-sales">800+ orders</span>
+            </div>
+            <div class="store-price">$28-38 | High Protein</div>
+            <div class="store-tags">
+              <span class="store-tag">30g Protein</span>
+              <span class="store-tag">Fitness</span>
+              <span class="store-tag">Nutritionist</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="store-item" onclick="navigateTo('meal_detail.html?id=3')">
+          <div class="store-img">
+            <img src="images/family-meal.png" alt="Family Meal">
+          </div>
+          <div class="store-info">
+            <div class="store-name">
+              <span>Family Meal Plan</span>
+              <span class="store-distance">3km</span>
+            </div>
+            <div class="store-rating">
+              <span class="store-stars">★★★★★</span>
+              <span class="store-score">4.8</span>
+              <span class="store-sales">1200+ orders</span>
+            </div>
+            <div class="store-price">$88-128 | 3-4 people</div>
+            <div class="store-tags">
+              <span class="store-tag">Kids Nutrition</span>
+              <span class="store-tag">Traceable</span>
+              <span class="store-tag">KOL Recommended</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="store-item" onclick="navigateTo('meal_detail.html?id=4')">
+          <div class="store-img">
+            <img src="images/sugar-control-meal.png" alt="Sugar Control Meal">
+          </div>
+          <div class="store-info">
+            <div class="store-name">
+              <span>Low GI Meal</span>
+              <span class="store-distance">3km</span>
+            </div>
+            <div class="store-rating">
+              <span class="store-stars">★★★★☆</span>
+              <span class="store-score">4.6</span>
+              <span class="store-sales">600+ orders</span>
+            </div>
+            <div class="store-price">$30-40 | Low GI</div>
+            <div class="store-tags">
+              <span class="store-tag">Low GI</span>
+              <span class="store-tag">Diabetic Friendly</span>
+              <span class="store-tag">Professional</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Recommendation Modal -->
+<div class="recommend-modal" id="recommendModal">
+  <div class="modal-content">
+    <div class="modal-header">Select Your Dietary Goal</div>
+    <div class="modal-body">
+      <div class="goal-item" onclick="selectGoal('fat_loss')">
+        <span>Fat Loss</span>
+        <span>→</span>
+      </div>
+      <div class="goal-item" onclick="selectGoal('muscle_gain')">
+        <span>Muscle Gain</span>
+        <span>→</span>
+      </div>
+      <div class="goal-item" onclick="selectGoal('sugar_control')">
+        <span>Sugar Control</span>
+        <span>→</span>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-btn btn-cancel" onclick="hideModal()">Cancel</button>
+      <button class="modal-btn btn-confirm" onclick="confirmGoal()">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
