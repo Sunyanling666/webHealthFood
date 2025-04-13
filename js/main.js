@@ -87,3 +87,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// counter.js
+function updateCounter() {
+  const userId = getUniqueId(); // 获取用户ID
+  const counterElement = document.getElementById('counter');
+  const userVisits = localStorage.getItem(userId) || 0;
+
+  // 更新访问次数
+  const newVisits = parseInt(userVisits) + 1;
+  localStorage.setItem(userId, newVisits.toString());
+
+  // 更新页面显示
+  counterElement.textContent = newVisits;
+}
+
+// 获取用户ID，可以使用简单的随机字符串或更复杂的生成方法
+function getUniqueId() {
+  return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+}
+
+// 页面加载时更新计数器
+document.addEventListener('DOMContentLoaded', updateCounter);
+
