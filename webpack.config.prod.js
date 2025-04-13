@@ -11,27 +11,27 @@ module.exports = merge(common, {
       chunks: ['main']
     }),
     new HtmlWebpackPlugin({
-      template: './community.html',
+      template: './pages/community.html',
       filename: 'community.html',
       chunks: ['main']
     }),
     new HtmlWebpackPlugin({
-      template: './fat_loss.html',
+      template: './pages/fat_loss.html',
       filename: 'fat_loss.html',
       chunks: ['main']
     }),
     new HtmlWebpackPlugin({
-      template: './muscle_gain.html',
+      template: './pages/muscle_gain.html',
       filename: 'muscle_gain.html',
       chunks: ['main']
     }),
     new HtmlWebpackPlugin({
-      template: './recipes.html',
+      template: './pages/recipes.html',
       filename: 'recipes.html',
       chunks: ['main']
     }),
     new HtmlWebpackPlugin({
-      template: './sugar_control.html',
+      template: './pages/sugar_control.html',
       filename: 'sugar_control.html',
       chunks: ['main'],
       minify: {
@@ -42,7 +42,7 @@ module.exports = merge(common, {
       }
     }),
     new HtmlWebpackPlugin({
-      template: './supply_chain.html',
+      template: './pages/supply_chain.html',
       filename: 'supply_chain.html',
       chunks: ['main']
     }),
