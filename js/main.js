@@ -88,25 +88,49 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// counter.js
+// counter.js - 计数器功能
 function updateCounter() {
-  const userId = getUniqueId(); // 获取用户ID
+  // 同时实现本地计数和API计数
   const counterElement = document.getElementById('counter');
-  const userVisits = localStorage.getItem(userId) || 0;
 
-  // 更新访问次数
+  // 先更新本地存储的计数器
+  const userId = getUniqueId();
+  const userVisits = localStorage.getItem(userId) || 0;
   const newVisits = parseInt(userVisits) + 1;
   localStorage.setItem(userId, newVisits.toString());
 
-  // 更新页面显示
-  counterElement.textContent = newVisits;
+  // 立即显示本地计数（快速响应）
+  counterElement.textContent = newVisits.toLocaleString();
+
+  // 然后尝试更新API计数
+  fetch('https://counterapi.com/api/mlj88.top/homepage/increment', {
+    method: 'GET',
+    cache: 'no-cache'
+  })
+    .then(res => res.json())
+    .then(data => {
+      // 如果API返回成功，更新为服务器计数（更准确）
+      counterElement.textContent = data.count.toLocaleString();
+    })
+    .catch(error => {
+      console.error('计数器API请求失败:', error);
+      // 保持本地计数值
+    });
 }
 
-// 获取用户ID，可以使用简单的随机字符串或更复杂的生成方法
+// 生成唯一用户ID
 function getUniqueId() {
-  return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+  let id = localStorage.getItem('userUniqueId');
+  if (!id) {
+    id = Math.random().toString(36).substring(2, 15) +
+      Math.random().toString(36).substring(2, 15);
+    localStorage.setItem('userUniqueId', id);
+  }
+  return id;
 }
 
-// 页面加载时更新计数器
-document.addEventListener('DOMContentLoaded', updateCounter);
+// 页面加载时初始化计数器
+document.addEventListener('DOMContentLoaded', function() {
+  updateCounter();
 
+});
