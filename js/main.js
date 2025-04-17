@@ -103,7 +103,7 @@ function updateCounter() {
   counterElement.textContent = newVisits.toLocaleString();
 
   // 然后尝试更新API计数
-  fetch('https://counterapi.com/api/mlj88.top/homepage/increment', {
+  fetch('https://main.d2pnbgwan6hos5.amplifyapp.com/', {
     method: 'GET',
     cache: 'no-cache'
   })
