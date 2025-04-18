@@ -90,61 +90,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // counter.js - 计数器功能
 function updateCounter() {
+  // 同时实现本地计数和API计数
   const counterElement = document.getElementById('counter');
+
+  // 先更新本地存储的计数器
   const userId = getUniqueId();
+  const userVisits = localStorage.getItem(userId) || 0;
+  const newVisits = parseInt(userVisits) + 1;
+  localStorage.setItem(userId, newVisits.toString());
 
-  // 检查是否已经计数过
-  const hasCounted = localStorage.getItem(`hasCounted_${userId}`);
+  // 立即显示本地计数（快速响应）
+  counterElement.textContent = newVisits.toLocaleString();
 
-  if (!hasCounted) {
-    // 第一次访问，进行计数
-    localStorage.setItem(`hasCounted_${userId}`, 'true');
-
-    // 更新本地存储的总计数
-    const totalCount = parseInt(localStorage.getItem('totalCount') || '0') + 1;
-    localStorage.setItem('totalCount', totalCount.toString());
-
-    // 立即显示本地计数
-    counterElement.textContent = totalCount.toLocaleString();
-
-    // 然后尝试更新API计数
-    fetch('https://counterapi.com/api/mlj88.top/homepage/increment', {
-      method: 'POST', // 改为POST方法更安全
-      cache: 'no-cache',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ action: 'increment' })
+  // 然后尝试更新API计数
+  fetch('https://counterapi.com/api/main.d2pnbgwan6hos5.amplifyapp.com/homepage/increment', {
+    method: 'GET',
+    cache: 'no-cache'
+  })
+    .then(res => res.json())
+    .then(data => {
+      // 如果API返回成功，更新为服务器计数（更准确）
+      counterElement.textContent = data.count.toLocaleString();
     })
-      .then(res => res.json())
-      .then(data => {
-        // 如果API返回成功，更新为服务器计数
-        counterElement.textContent = data.count.toLocaleString();
-      })
-      .catch(error => {
-        console.error('计数器API请求失败:', error);
-      });
-  } else {
-    // 已经计数过，只显示当前总数
-    const totalCount = localStorage.getItem('totalCount') || '0';
-    counterElement.textContent = totalCount.toLocaleString();
-
-    // 可以添加一个请求来获取最新计数，但不增加计数
-    fetch('https://main.d2pnbgwan6hos5.amplifyapp.com/', {
-      method: 'GET',
-      cache: 'no-cache'
-    })
-      .then(res => res.json())
-      .then(data => {
-        counterElement.textContent = data.count.toLocaleString();
-      })
-      .catch(error => {
-        console.error('计数器API请求失败:', error);
-      });
-  }
+    .catch(error => {
+      console.error('计数器API请求失败:', error);
+      // 保持本地计数值
+    });
 }
 
-// 生成唯一用户ID（保持不变）
+// 生成唯一用户ID
 function getUniqueId() {
   let id = localStorage.getItem('userUniqueId');
   if (!id) {
@@ -158,4 +132,5 @@ function getUniqueId() {
 // 页面加载时初始化计数器
 document.addEventListener('DOMContentLoaded', function() {
   updateCounter();
+
 });

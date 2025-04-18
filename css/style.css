@@ -636,7 +636,8 @@ button:active, [data-navigate]:active {
   transform: scale(0.98);
 }
 
-/* counter.css */
+
+/* counter css*/
 .counter-container {
   display: inline-block;
   padding: 10px 20px;
@@ -646,12 +647,14 @@ button:active, [data-navigate]:active {
   font-family: 'Arial', sans-serif;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin: 20px 50px 20px 50px;
+  margin: 20px 0;
 }
+
 .counter-label {
   font-size: 18px;
   margin-bottom: 5px;
 }
+
 .counter-number {
   font-size: 24px;
   font-weight: bold;
