@@ -139,20 +139,14 @@ async function fetchVisitCount() {
 
     if (domElements.visits) {
       domElements.visits.textContent = data.value.toLocaleString();
-
-      // 存储到localStorage
-      localStorage.setItem('visitCount', data.value);
-      localStorage.setItem('lastVisit', new Date().toISOString());
     }
   } catch (error) {
     console.error('获取访问计数失败:', error);
-
-    // 尝试从localStorage恢复
-    const savedCount = localStorage.getItem('visitCount');
-    if (domElements.visits) {
-      domElements.visits.textContent = savedCount ? savedCount : 'N/A';
-    }
+    setTimeout(() => {
+      fetchVisitCount();
+    }, 500);
   }
+
 }
 
 // 初始化应用
