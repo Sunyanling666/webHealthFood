@@ -135,6 +135,7 @@ async function fetchVisitCount() {
 
     const data = await response.json();
     appState.visitCount = data.value;
+    document.getElementById('counter').innerText=`${data.value}`
 
     if (domElements.visits) {
       domElements.visits.textContent = data.value.toLocaleString();
