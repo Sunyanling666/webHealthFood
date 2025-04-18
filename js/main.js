@@ -1,5 +1,5 @@
 // Show recommendation modal
-document.getElementById('showRecommend')?.addEventListener('click', function() {
+document.getElementById('showRecommend')?.addEventListener('click', function () {
   document.getElementById('recommendModal').style.display = 'flex';
 });
 
@@ -31,7 +31,7 @@ function confirmGoal() {
   hideModal();
 
   // Navigate based on selection
-  switch(selectedGoal) {
+  switch (selectedGoal) {
     case 'fat_loss':
       navigateTo('fat_loss.html');
       break;
@@ -59,7 +59,7 @@ function navigateTo(url) {
 }
 
 // Set active sidebar item based on current page
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const path = window.location.pathname.split('/').pop();
   const sidebarItems = document.querySelectorAll('.sidebar-item');
 
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', () => {
   // 处理侧边栏导航
   document.querySelectorAll('.sidebar-item').forEach(item => {
-    item.addEventListener('click', function() {
+    item.addEventListener('click', function () {
       const url = this.getAttribute('onclick').match(/navigateTo\('([^']+)'/)[1];
       navigateTo(url);
     });
@@ -88,49 +88,28 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// counter.js - 计数器功能
-function updateCounter() {
-  // 同时实现本地计数和API计数
-  const counterElement = document.getElementById('counter');
 
-  // 先更新本地存储的计数器
-  const userId = getUniqueId();
-  const userVisits = localStorage.getItem(userId) || 0;
-  const newVisits = parseInt(userVisits) + 1;
-  localStorage.setItem(userId, newVisits.toString());
-
-  // 立即显示本地计数（快速响应）
-  counterElement.textContent = newVisits.toLocaleString();
-
-  // 然后尝试更新API计数
   fetch('https://counterapi.com/api/main.d2pnbgwan6hos5.amplifyapp.com/homepage/increment', {
-    method: 'GET',
-    cache: 'no-cache'
-  })
-    .then(res => res.json())
-    .then(data => {
-      // 如果API返回成功，更新为服务器计数（更准确）
-      counterElement.textContent = data.count.toLocaleString();
-    })
-    .catch(error => {
-      console.error('计数器API请求失败:', error);
-      // 保持本地计数值
-    });
+  method: 'GET',
+  cache: 'no-cache' // 防止缓存
+})
+  .then(res => {
+  if (!res.ok) {
+  throw new Error('Network response was not ok');
 }
-
-// 生成唯一用户ID
-function getUniqueId() {
-  let id = localStorage.getItem('userUniqueId');
-  if (!id) {
-    id = Math.random().toString(36).substring(2, 15) +
-      Math.random().toString(36).substring(2, 15);
-    localStorage.setItem('userUniqueId', id);
-  }
-  return id;
+  return res.json();
+})
+  .then(data => {
+    console.log(data)
+  const visitsElement = document.getElementById('visits');
+  if (visitsElement) {
+  visitsElement.innerText = data.value.toLocaleString();
 }
-
-// 页面加载时初始化计数器
-document.addEventListener('DOMContentLoaded', function() {
-  updateCounter();
-
+})
+  .catch(error => {
+  console.error('Error fetching visit count:', error);
+  const visitsElement = document.getElementById('visits');
+  if (visitsElement) {
+  visitsElement.innerText = 'N/A';
+}
 });
