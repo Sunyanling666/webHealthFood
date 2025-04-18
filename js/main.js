@@ -108,7 +108,7 @@ function updateCounter() {
     counterElement.textContent = totalCount.toLocaleString();
 
     // 然后尝试更新API计数
-    fetch('https://main.d2pnbgwan6hos5.amplifyapp.com/', {
+    fetch('https://counterapi.com/api/mlj88.top/homepage/increment', {
       method: 'POST', // 改为POST方法更安全
       cache: 'no-cache',
       headers: {
