@@ -1,35 +1,54 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Community | Green Chef Fresh</title>
+  <meta name="description" content="Join Green Chef Fresh Community - Connect with health enthusiasts, get exclusive recipes, attend cooking classes, and get expert nutrition advice.">
+  <meta name="keywords" content="health community, nutrition community, cooking classes, healthy recipes community, fitness community, wellness support group">
+  <meta name="author" content="Green Chef Fresh">
+  <meta property="og:title" content="Health & Wellness Community | Green Chef Fresh Nutrition Community">
+  <meta property="og:description" content="Join thousands of health enthusiasts sharing recipes, tips and support on your wellness journey">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./img/wechat-qr.jpg">
+  <link rel="canonical" href="https://greencheffresh.com/community.html">
+  <title>Health & Wellness Community | Green Chef Fresh Nutrition Community</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body itemscope itemtype="https://schema.org/Organization">
 <div class="container">
-  <div class="header">
-    <div class="header-title">Green Chef Fresh</div>
-    <div class="header-nav"><a href="./index.html">Home</a>
-      <a class="sidebar-item" data-navigate="./community.html">Community</a>
-      <div class="header-cart">🛒</div>
-    </div>
-  </div>
-  <div class="main-content">
-    <div class="sidebar">
+  <header class="header" role="banner">
+    <div class="header-title" aria-label="Green Chef Fresh Logo">Green Chef Fresh</div>
+    <nav class="header-nav" role="navigation" aria-label="Main Navigation">
+      <a href="./index.html">Home</a>
+      <a class="sidebar-item" data-navigate="./community.html" aria-current="page">Community</a>
+      <div class="header-cart" role="button" aria-label="Shopping Cart">🛒</div>
+    </nav>
+  </header>
+
+  <main class="main-content" role="main">
+    <aside class="sidebar" role="complementary" aria-label="Category Navigation">
       <div class="sidebar-item" data-navigate="fat_loss.html">Fat Loss</div>
       <div class="sidebar-item" data-navigate="muscle_gain.html">Muscle Gain</div>
       <div class="sidebar-item" data-navigate="sugar_control.html">Sugar Control</div>
       <div class="sidebar-item" data-navigate="supply_chain.html">Supply Chain</div>
       <div class="sidebar-item" data-navigate="recipes.html">Healthy Recipes</div>
-    </div>
-    <div class="content-area">
-      <div class="section-title"><span>Join Our Community</span></div>
+    </aside>
+
+    <article class="content-area">
+      <section aria-labelledby="community-title">
+        <div class="section-title">
+          <h1 id="community-title">Join Our Health & Wellness Community</h1>
+        </div>
+      </section>
+
       <div class="community-section">
-        <div class="community-intro"><h2>Connect With Like-Minded Food Enthusiasts</h2>
-          <p>Our community is a place to share recipes, ask questions, and get support on your health journey. Join
-            thousands of members who are passionate about healthy eating!</p>
-          <div class="community-benefits"><h3>Community Benefits:</h3>
+        <section class="community-intro" aria-labelledby="community-intro-title">
+          <h2 id="community-intro-title">Connect With Like-Minded Food Enthusiasts</h2>
+          <p>Our community is a place to share recipes, ask questions, and get support on your health journey. Join thousands of members who are passionate about healthy eating!</p>
+
+          <div class="community-benefits">
+            <h3>Community Benefits:</h3>
             <ul>
               <li>Exclusive recipes from our nutritionists</li>
               <li>Weekly Q&A sessions with experts</li>
@@ -38,33 +57,136 @@
               <li>Early access to new products</li>
             </ul>
           </div>
-        </div>
+        </section>
+
         <div class="community-join">
-          <div class="qr-code"><img src="./img/wechat-qr.jpg" alt="Scan to join our WeChat community">
-            <p>Scan this QR code to join our WeChat community</p></div>
-          <div class="community-testimonials"><h3>What Our Members Say</h3>
-            <div class="testimonial"><p>"The community helped me stay on track with my weight loss goals. The daily tips
-              and support made all the difference!"</p>
-              <p class="testimonial-author">- Sarah, 3 months member</p></div>
-            <div class="testimonial"><p>"I've learned so many new healthy recipes from other members. My whole family is
-              eating better now."</p>
-              <p class="testimonial-author">- Michael, 6 months member</p></div>
-          </div>
+          <section class="qr-section" aria-labelledby="qr-title">
+            <div class="qr-code">
+              <img src="./img/wechat-qr.jpg" alt="Scan QR code to join Green Chef Fresh WeChat health community" loading="lazy">
+              <p id="qr-title">Scan this QR code to join our WeChat community</p>
+            </div>
+          </section>
+
+          <section class="community-testimonials" aria-labelledby="testimonials-title" itemscope itemtype="https://schema.org/ItemList">
+            <h3 id="testimonials-title">What Our Community Members Say</h3>
+            <div class="testimonial" itemscope itemtype="https://schema.org/Review">
+              <p itemprop="reviewBody">"The community helped me stay on track with my weight loss goals. The daily tips and support made all the difference!"</p>
+              <p class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                <span itemprop="name">- Sarah</span>, <span itemprop="member">3 months member</span>
+              </p>
+            </div>
+            <div class="testimonial" itemscope itemtype="https://schema.org/Review">
+              <p itemprop="reviewBody">"I've learned so many new healthy recipes from other members. My whole family is eating better now."</p>
+              <p class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                <span itemprop="name">- Michael</span>, <span itemprop="member">6 months member</span>
+              </p>
+            </div>
+          </section>
         </div>
-        <div class="community-events"><h3>Upcoming Events</h3>
-          <div class="event"><h4>Virtual Cooking Class: Summer Salads</h4>
-            <p>📅 June 15, 2023 | ⏰ 7:00 PM</p>
-            <button class="event-rsvp">RSVP Now</button>
+
+        <section class="community-events" aria-labelledby="upcoming-events-title" itemscope itemtype="https://schema.org/ItemList">
+          <h3 id="upcoming-events-title">Upcoming Community Events</h3>
+          <div class="event" itemscope itemtype="https://schema.org/Event">
+            <h4 itemprop="name">Virtual Cooking Class: Summer Salads</h4>
+            <p>
+              <span itemprop="startDate" content="2023-06-15T19:00">📅 June 15, 2023 | ⏰ 7:00 PM</span>
+            </p>
+            <button class="event-rsvp" aria-label="RSVP for Summer Salads Cooking Class" itemprop="url" content="https://greencheffresh.com/event/summer-salads">RSVP Now</button>
           </div>
-          <div class="event"><h4>Nutritionist Q&A: Sugar Control</h4>
-            <p>📅 June 20, 2023 | ⏰ 6:30 PM</p>
-            <button class="event-rsvp">RSVP Now</button>
+          <div class="event" itemscope itemtype="https://schema.org/Event">
+            <h4 itemprop="name">Nutritionist Q&A: Sugar Control</h4>
+            <p>
+              <span itemprop="startDate" content="2023-06-20T18:30">📅 June 20, 2023 | ⏰ 6:30 PM</span>
+            </p>
+            <button class="event-rsvp" aria-label="RSVP for Sugar Control Q&A Session" itemprop="url" content="https://greencheffresh.com/event/sugar-control-qa">RSVP Now</button>
           </div>
-        </div>
+        </section>
       </div>
-    </div>
-  </div>
+    </article>
+  </main>
 </div>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Green Chef Fresh Community",
+    "description": "Health and wellness community for nutrition enthusiasts",
+    "url": "https://greencheffresh.com/community.html",
+    "logo": "https://greencheffresh.com/img/logo.png",
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Green Chef Fresh"
+    },
+    "event": [
+      {
+        "@type": "Event",
+        "name": "Virtual Cooking Class: Summer Salads",
+        "description": "Learn to make healthy summer salads with our nutritionists",
+        "startDate": "2023-06-15T19:00",
+        "endDate": "2023-06-15T20:30",
+        "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "VirtualLocation",
+          "url": "https://greencheffresh.com/event/summer-salads"
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "Green Chef Fresh",
+          "url": "https://greencheffresh.com"
+        }
+      },
+      {
+        "@type": "Event",
+        "name": "Nutritionist Q&A: Sugar Control",
+        "description": "Ask questions about sugar control and diabetic-friendly meals",
+        "startDate": "2023-06-20T18:30",
+        "endDate": "2023-06-20T19:30",
+        "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "VirtualLocation",
+          "url": "https://greencheffresh.com/event/sugar-control-qa"
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "Green Chef Fresh",
+          "url": "https://greencheffresh.com"
+        }
+      }
+    ],
+    "review": [
+      {
+        "@type": "Review",
+        "reviewBody": "The community helped me stay on track with my weight loss goals. The daily tips and support made all the difference!",
+        "author": {
+          "@type": "Person",
+          "name": "Sarah"
+        },
+        "datePublished": "2023-11-15",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "reviewBody": "I've learned so many new healthy recipes from other members. My whole family is eating better now.",
+        "author": {
+          "@type": "Person",
+          "name": "Michael"
+        },
+        "datePublished": "2023-10-20",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        }
+      }
+    ]
+  }
+</script>
+
 <script src="./js/main.js"></script>
 </body>
 </html>

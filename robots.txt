@@ -1,2 +1,17 @@
+# Green Chef Fresh Robots.txt
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /search/
+
+Sitemap: https://greencheffresh.com/sitemap.xml
+
+# Crawl-delay: 2
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/

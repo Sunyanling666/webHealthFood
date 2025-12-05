@@ -1,69 +1,128 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Supply Chain | Green Chef Fresh</title>
+  <meta name="description" content="Green Chef Fresh Supply Chain - Transparent ingredient sourcing from local farms. USDA Organic certified, sustainable sourcing with full traceability.">
+  <meta name="keywords" content="food supply chain, ingredient sourcing, organic certification, sustainable sourcing, food transparency, farm to table">
+  <meta name="author" content="Green Chef Fresh">
+  <link rel="canonical" href="https://greencheffresh.com/supply_chain.html">
+  <title>Supply Chain Transparency | Ingredient Sourcing - Green Chef Fresh</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body itemscope itemtype="https://schema.org/Organization">
 <div class="container">
-  <div class="header">
+  <header class="header">
     <div class="header-title">Green Chef Fresh</div>
-    <div class="header-nav"><a href="./index.html">Home</a> <a class="sidebar-item" data-navigate="./community.html">Community</a>
+    <nav class="header-nav">
+      <a href="./index.html">Home</a>
+      <a class="sidebar-item" data-navigate="./community.html">Community</a>
       <div class="header-cart">🛒</div>
-    </div>
-  </div>
-  <div class="main-content">
-    <div class="sidebar">
+    </nav>
+  </header>
+  <main class="main-content">
+    <aside class="sidebar">
       <div class="sidebar-item" data-navigate="fat_loss.html">Fat Loss</div>
       <div class="sidebar-item" data-navigate="muscle_gain.html">Muscle Gain</div>
       <div class="sidebar-item" data-navigate="sugar_control.html">Sugar Control</div>
       <div class="sidebar-item" data-navigate="supply_chain.html">Supply Chain</div>
       <div class="sidebar-item" data-navigate="recipes.html">Healthy Recipes</div>
-    </div>
-    <div class="content-area">
-      <div class="section-title"><span>Our Supply Chain</span></div>
-      <div class="supply-chain-section"><h3>Ingredient Sources</h3>
-        <div class="supply-map"><img src="./img/supply-map.jpg" alt="Our Ingredient Sources Map">
-          <p>We source ingredients locally whenever possible, with special imports only when necessary for quality.</p>
+    </aside>
+    <article class="content-area">
+      <section aria-labelledby="supply-chain-title">
+        <div class="section-title">
+          <h1 id="supply-chain-title">Our Transparent Supply Chain</h1>
         </div>
-        <div class="supply-items">
-          <div class="supply-item"><h4>Proteins</h4>
-            <ul>
-              <li><strong>Chicken:</strong> Local free-range farms ($3.50/lb)</li>
-              <li><strong>Beef:</strong> Grass-fed, Alberta, Canada ($6.80/lb)</li>
-              <li><strong>Salmon:</strong> Sustainable Norwegian farms ($9.20/lb)</li>
-              <li><strong>Tofu:</strong> Organic, California ($2.30/lb)</li>
-            </ul>
+      </section>
+
+      <div class="supply-chain-section">
+        <section aria-labelledby="ingredient-sources">
+          <h2 id="ingredient-sources">Ingredient Sources & Quality</h2>
+          <div class="supply-map">
+            <img src="./img/supply-map.jpg" alt="Green Chef Fresh ingredient sourcing map showing local and international suppliers" loading="lazy">
+            <p>We source ingredients locally whenever possible, with special imports only when necessary for quality.</p>
           </div>
-          <div class="supply-item"><h4>Produce</h4>
-            <ul>
-              <li><strong>Leafy Greens:</strong> Local hydroponic farms ($1.20/lb)</li>
-              <li><strong>Vegetables:</strong> Regional organic farms ($0.80-$2.50/lb)</li>
-              <li><strong>Fruits:</strong> Seasonal local sources</li>
-              <li><strong>Grains:</strong> Organic whole grains ($0.60/lb)</li>
-            </ul>
+
+          <div class="supply-items" itemscope itemtype="https://schema.org/ItemList">
+            <div class="supply-item">
+              <h3>High Quality Proteins</h3>
+              <ul>
+                <li><strong>Chicken:</strong> Local free-range farms ($3.50/lb)</li>
+                <li><strong>Beef:</strong> Grass-fed, Alberta, Canada ($6.80/lb)</li>
+                <li><strong>Salmon:</strong> Sustainable Norwegian farms ($9.20/lb)</li>
+                <li><strong>Tofu:</strong> Organic, California ($2.30/lb)</li>
+              </ul>
+            </div>
+            <div class="supply-item">
+              <h3>Fresh Produce</h3>
+              <ul>
+                <li><strong>Leafy Greens:</strong> Local hydroponic farms ($1.20/lb)</li>
+                <li><strong>Vegetables:</strong> Regional organic farms ($0.80-$2.50/lb)</li>
+                <li><strong>Fruits:</strong> Seasonal local sources</li>
+                <li><strong>Grains:</strong> Organic whole grains ($0.60/lb)</li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <h3>Quality Certifications</h3>
-        <div class="certifications">
-          <div class="certification"><img src="./img/organic-cert.jpg" alt="Organic Certification">
-            <p>USDA Organic Certified</p></div>
-          <div class="certification"><img src="./img/food-safety-cert.jpg" alt="Food Safety Certification">
-            <p>Food Safety Certified</p></div>
-          <div class="certification"><img src="./img/sustainable-cert.jpg" alt="Sustainable Certification">
-            <p>Sustainable Sourcing</p></div>
-        </div>
-        <h3>Our Central Kitchen</h3>
-        <div class="kitchen-info"><img src="./img/kitchen.jpg" alt="Our Central Kitchen">
-          <p>All meals are prepared in our state-of-the-art central kitchen that meets the highest food safety
-            standards. We use minimal processing and no artificial additives to preserve nutritional value and
-            taste.</p></div>
+        </section>
+
+        <section aria-labelledby="quality-certifications">
+          <h2 id="quality-certifications">Quality Certifications</h2>
+          <div class="certifications">
+            <div class="certification" itemscope itemtype="https://schema.org/Certification">
+              <img src="./img/organic-cert.jpg" alt="USDA Organic Certification for Green Chef Fresh" loading="lazy">
+              <p itemprop="name">USDA Organic Certified</p>
+            </div>
+            <div class="certification" itemscope itemtype="https://schema.org/Certification">
+              <img src="./img/food-safety-cert.jpg" alt="Food Safety Certification for Green Chef Fresh kitchen" loading="lazy">
+              <p itemprop="name">Food Safety Certified</p>
+            </div>
+            <div class="certification" itemscope itemtype="https://schema.org/Certification">
+              <img src="./img/sustainable-cert.jpg" alt="Sustainable Sourcing Certification for Green Chef Fresh" loading="lazy">
+              <p itemprop="name">Sustainable Sourcing</p>
+            </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="central-kitchen">
+          <h2 id="central-kitchen">Our State-of-the-Art Central Kitchen</h2>
+          <div class="kitchen-info">
+            <img src="./img/kitchen.jpg" alt="Green Chef Fresh central kitchen with modern equipment and hygiene standards" loading="lazy">
+            <p>All meals are prepared in our state-of-the-art central kitchen that meets the highest food safety standards. We use minimal processing and no artificial additives to preserve nutritional value and taste.</p>
+          </div>
+        </section>
       </div>
-    </div>
-  </div>
+    </article>
+  </main>
 </div>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Green Chef Fresh",
+    "description": "Healthy meal delivery service with transparent supply chain",
+    "url": "https://greencheffresh.com",
+    "foundingDate": "2020",
+    "areaServed": "United States",
+    "hasCredential": [
+      {
+        "@type": "Certification",
+        "name": "USDA Organic Certified"
+      },
+      {
+        "@type": "Certification",
+        "name": "Food Safety Certified"
+      }
+    ],
+    "knowsAbout": [
+      "Healthy Eating",
+      "Nutrition",
+      "Meal Preparation",
+      "Food Safety"
+    ]
+  }
+</script>
+
 <script src="./js/main.js"></script>
 </body>
 </html>
