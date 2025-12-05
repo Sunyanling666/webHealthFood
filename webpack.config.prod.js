@@ -57,6 +57,8 @@ module.exports = merge(common, {
         //{ from: 'icon.jpg', to: 'icon.jpg' },
         { from: '404.html', to: '404.html' },
         { from: 'site.webmanifest', to: 'site.webmanifest' },
+        { from: 'sitemap.xml', to: 'sitemap.xml' },
+        { from: 'vercel.json', to: 'vercel.json' },
       ],
     }),
   ],
