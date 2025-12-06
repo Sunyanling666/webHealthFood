@@ -2,45 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://green-chef-fresh.vercel.app/</loc>
-    <lastmod>2023-12-01</lastmod>
+    <lastmod>2025-12-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://green-chef-fresh.vercel.app/muscle_gain.html</loc>
-    <lastmod>2023-12-01</lastmod>
+    <lastmod>2025-12-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://green-chef-fresh.vercel.app/fat_loss.html</loc>
-    <lastmod>2023-12-01</lastmod>
+    <lastmod>2025-12-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://green-chef-fresh.vercel.app/sugar_control.html</loc>
-    <lastmod>2023-12-01</lastmod>
+    <lastmod>2025-12-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://green-chef-fresh.vercel.app/recipes.html</loc>
-    <lastmod>2023-12-01</lastmod>
+    <lastmod>2025-12-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://green-chef-fresh.vercel.app/supply_chain.html</loc>
-    <lastmod>2023-12-01</lastmod>
+    <lastmod>2025-12-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://green-chef-fresh.vercel.app/community.html</loc>
-    <lastmod>2023-12-01</lastmod>
+    <lastmod>2025-12-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>
-"<!-- Updated on $(date) -->" 
